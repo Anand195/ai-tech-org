@@ -1,7 +1,12 @@
-# ScaleSync AI-Native Organization Plugin — `ai_tech_org_plugin` (v2.0.0)
+# ScaleSync AI-Native Organization Plugin — `ai_tech_org_plugin` (v3.0.0)
 
 ## What This Is
-A **single self-contained plugin** that is a complete AI agency: idea → market-fit → spec → Docker-first build → k8s/Helm → security/QA → release → launch → marketing → business growth. **239 skills** in one bundle. AOP-governed (auto-fired via hooks), sub-agent driven, TDD-enforced. One plugin, used everywhere, for every task.
+A **single self-contained plugin** that is a complete AI agency: idea → market-fit → spec → Docker-first build → k8s/Helm → security/QA → release → launch → marketing → business growth. **250 skills** (V3 adds 11 UI/UX design skills) + **118 agents** in one bundle. AOP-governed (auto-fired via hooks), sub-agent driven, TDD-enforced. One plugin, used everywhere, for every task.
+
+## V3 UI/UX Design System
+- **`skills/impeccable/`** — 23 design commands (craft, critique, audit, polish, animate, etc.) + 7 domain references (typography, color, spatial, motion, interaction, responsive, UX writing) + anti-pattern detection scripts. Sourced from [pbakaus/impeccable](https://github.com/pbakaus/impeccable)
+- **10 taste-skill variants** — design-taste-frontend (v2 default), design-taste-frontend-v1, gpt-taste, image-to-code, redesign-existing-projects, high-end-visual-design, full-output-enforcement, minimalist-ui, industrial-brutalist-ui, stitch-design-taste. Sourced from [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill)
+- **Emil Kowalski design engineering** — animation decision framework, interaction design rules, Before/After review format merged into existing ui-ux-designer skill. Sourced from [emilkowalski/skill](https://github.com/emilkowalski/skill)
 
 ## V2 Additions (hardening)
 - **`commands/`** — first-class slash entry points: `/scalesync:new-idea`, `:validate`, `:build`, `:portfolio`, `:phase-done`, `:release`

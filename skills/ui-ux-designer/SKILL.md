@@ -430,3 +430,85 @@ Score each 0-4 (0=not applicable, 4=fully compliant):
 | 9 | Help users recognize/recover from errors | /4 | |
 | 10 | Help and documentation | /4 | |
 ```
+
+---
+
+## DESIGN ENGINEERING PRINCIPLES (Emil Kowalski)
+
+### Core Philosophy
+
+**Taste is trained, not innate.** Good taste is not personal preference. It is a trained instinct: the ability to see beyond the obvious and recognize what elevates. Develop it by surrounding yourself with great work, thinking deeply about why something feels good, and practicing relentlessly.
+
+**Unseen details compound.** Most details users never consciously notice — that is the point. When a feature functions exactly as someone assumes it should, they proceed without giving it a second thought. Every invisible decision below exists because the aggregate of correctness creates interfaces people love without knowing why.
+
+**Beauty is leverage.** People select tools based on the overall experience, not just functionality. Good defaults and good animations are real differentiators. Beauty is underutilized in software — use it as leverage to stand out.
+
+### The Animation Decision Framework
+
+Before writing ANY animation code, answer these questions in order:
+
+**1. Should this animate at all?**
+
+| Frequency | Decision |
+|-----------|----------|
+| 100+ times/day (keyboard shortcuts, palette toggle) | No animation. Ever. |
+| Tens of times/day (hover effects, list navigation) | Remove or drastically reduce |
+| Occasional (modals, drawers, toasts) | Standard animation |
+| Rare/first-time (onboarding, feedback forms) | Can add delight |
+
+**Never animate keyboard-initiated actions.** These actions are repeated hundreds of times daily. Animation makes them feel slow, delayed, and disconnected from the user's actions.
+
+**2. What type of animation?**
+
+| Purpose | Technique | Easing |
+|---------|-----------|--------|
+| Element entering | Scale up + fade in | ease-out |
+| Element exiting | Scale down + fade out | ease-in (fast) |
+| List item appearing | Staggered fade + slide up | ease-out |
+| Shared element transition | Morph / FLIP animation | cubic-bezier |
+| Micro-interaction | Transform scale | ease-out |
+
+**3. Duration rules of thumb**
+
+| Action | Duration |
+|--------|----------|
+| Micro-interaction (hover, active) | 100-150ms |
+| Element appearing | 200-300ms |
+| Modal/drawer entering | 250-350ms |
+| Modal/drawer exiting | 150-200ms (faster) |
+| Page transitions | 300-500ms |
+| Delight/celebration | 500-1000ms |
+
+**4. Transition specificity**
+
+| ❌ Bad | ✅ Good | Why |
+|--------|---------|-----|
+| `transition: all 300ms` | `transition: transform 200ms ease-out` | Specify exact properties; avoid `all` |
+| `transform: scale(0)` | `transform: scale(0.95); opacity: 0` | Nothing appears from nothing |
+| `ease-in` on dropdown | `ease-out` with custom curve | ease-in feels sluggish |
+| No `:active` state on button | `transform: scale(0.97)` on `:active` | Buttons must feel responsive |
+| `transform-origin: center` on popover | `transform-origin: var(--radix-popover-content-transform-origin)` | Popovers scale from trigger |
+
+### Review Format
+
+When reviewing UI code, use this format:
+
+```markdown
+| Before | After | Why |
+|--------|-------|-----|
+| `transition: all 300ms` | `transition: transform 200ms ease-out` | Specify exact properties |
+| `scale(0)` | `scale(0.95); opacity: 0` | Nothing appears from nothing |
+```
+
+### Interaction Design Rules
+
+- **Nothing in the real world appears from nothing.** Elements entering the viewport should scale up from a smaller size (0.95) while fading in. Elements disappearing should shrink and fade.
+- **Scale from the origin of the trigger.** A dropdown triggered by a button should scale from that button's position. Use CSS Anchor Positioning or manually calculate based on trigger position.
+- **Avoid `scale(0)` for entrance animations.** Elements entering should start at `scale(0.95)` with `opacity: 0`, not `scale(0)`. `scale(0)` creates a flash of invisible content and feels like a glitch.
+- **Buttons must feel responsive.** Every button needs an `:active` state that provides physical feedback — a subtle scale-down (0.97) that lasts ~100ms. Without it, the button feels dead.
+- **Exit animations must be faster than entrance animations.** Users should never wait for something to disappear.
+- **Prefer `auto` keyword for width and height animations** using `interpolate-size: allow-keywords` or known explicit dimensions. Animating to/from `auto` prevents layout shifts.
+- **Default `transition` should be `opacity` and `transform` only.** These are composited on the GPU and do not trigger layout or paint. Never animate `width`, `height`, `top`, `left`, or `margin` unless using the FLIP technique.
+- **Use `content-visibility: auto`** on off-screen sections to defer rendering and improve initial page load performance.
+- **`will-change` should be applied and removed dynamically** — applied before the animation starts (via JS or `:hover`), removed when the animation ends via an event listener or `animationend`.
+- **Avoid `overscroll-behavior: contain` on body** — it breaks scroll-based animations and browser chrome pull-to-refresh. Apply it only to specific modal/drawer overlays.

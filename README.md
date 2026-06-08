@@ -1,12 +1,12 @@
-# AI Tech Org v2.0 — Claude Code Plugin
+# AI Tech Org v3.0 — Claude Code Plugin
 
-![Version](https://img.shields.io/badge/version-2.0.0-blue)
+![Version](https://img.shields.io/badge/version-3.0.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Skills](https://img.shields.io/badge/skills-239-orange)
+![Skills](https://img.shields.io/badge/skills-250-orange)
 ![Agents](https://img.shields.io/badge/agents-118-purple)
 ![Commands](https://img.shields.io/badge/commands-6-red)
 
-**ScaleSync AI-Native Organization** — a complete AI-powered IT organization inside Claude Code. **239 skills + 118 agents** across 10 categories. AOP-governed, sub-agent driven, TDD-enforced.
+**ScaleSync AI-Native Organization** — a complete AI-powered IT organization inside Claude Code. **250 skills + 118 agents** across 10 categories. AOP-governed, sub-agent driven, TDD-enforced.
 
 One plugin, end to end: idea intake → market validation → Docker-first build → k8s/Helm → security/QA → release → launch → marketing → business growth.
 
@@ -232,9 +232,9 @@ Research, competitive intelligence, and analysis agents.
 
 ---
 
-## Skills (239)
+## Skills (250)
 
-The plugin ships with **239 skills** covering the full SDLC, marketing, compliance, and business growth. Skills are deep — each with SKILL.md, scripts, references, templates, and evals.
+The plugin ships with **250 skills** covering the full SDLC, marketing, compliance, business growth, and now — a complete UI/UX design system. Skills are deep — each with SKILL.md, scripts, references, templates, and evals.
 
 | Category | Count | Examples |
 |----------|-------|----------|
@@ -254,6 +254,7 @@ The plugin ships with **239 skills** covering the full SDLC, marketing, complian
 | Git & Release | 8 | git-issue-maintainer, git-release-maintainer, git-update-tracker, git-worktree-manager, github-pages-publisher, release-manager, changelog-generator, ship-gate |
 | Growth & Marketing | 20+ | social-content, cro-advisor, form-cro, page-cro, signup-flow-cro, paywall-cro, popup-cro, onboarding-cro, free-tool-strategy, referral-program, webinar-marketing |
 | Research | 8 | market-researcher, competitive-intel, competitive-teardown, competitor-alternatives, risk-analyst, requirements-analyst, tech-stack-evaluator |
+| **UI/UX Design System (V3)** | **11** | **impeccable (23 design commands + 7 refs), design-taste-frontend, minimalist-ui, industrial-brutalist-ui, high-end-visual-design, image-to-code, redesign-existing-projects, gpt-taste, full-output-enforcement, stitch-design-taste, design-taste-frontend-v1** |
 
 ---
 
@@ -344,6 +345,28 @@ Review before adding write/deploy entries.
 ### Branding
 
 Edit `assets/pages-theme/style.scss` to customize the GitHub Pages theme colors for client walkthroughs.
+
+---
+
+## V3 UI/UX Design System (New)
+
+V3 adds a complete UI/UX design system with 11 new skills:
+
+| Skill | Source | Purpose |
+|-------|--------|---------|
+| [impeccable](skills/impeccable/) | pbakaus/impeccable | 23 design commands + 7 domain references (typography, color, motion, spatial, interaction, responsive, UX writing) + anti-pattern detection |
+| [design-taste-frontend](skills/design-taste-frontend/) | Leonxlnx/taste-skill | Anti-slop frontend skill with 3 adjustable dials (variance, motion, density) |
+| [design-taste-frontend-v1](skills/design-taste-frontend-v1/) | Leonxlnx/taste-skill | Original v1 of taste-skill (preserved for compatibility) |
+| [gpt-taste](skills/gpt-taste/) | Leonxlnx/taste-skill | Stricter GPT/Codex variant with higher layout variance |
+| [image-to-code](skills/image-to-code/) | Leonxlnx/taste-skill | Image-first pipeline: generate references → analyze → implement |
+| [redesign-existing-projects](skills/redesign-existing-projects/) | Leonxlnx/taste-skill | Audit existing UI then fix layout, spacing, hierarchy |
+| [high-end-visual-design](skills/high-end-visual-design/) | Leonxlnx/taste-skill | Polished, calm, premium UI with softer contrast and whitespace |
+| [full-output-enforcement](skills/full-output-enforcement/) | Leonxlnx/taste-skill | Forces complete code output — no placeholder comments |
+| [minimalist-ui](skills/minimalist-ui/) | Leonxlnx/taste-skill | Editorial product UI (Notion/Linear vibes) |
+| [industrial-brutalist-ui](skills/industrial-brutalist-ui/) | Leonxlnx/taste-skill | Swiss type, sharp contrast, experimental layout |
+| [stitch-design-taste](skills/stitch-design-taste/) | Leonxlnx/taste-skill | Google Stitch-compatible rules with DESIGN.md export |
+
+Additionally, **Emil Kowalski's design engineering philosophy** (animation decision framework, interaction design rules, review format) has been merged into the existing [ui-ux-designer](skills/ui-ux-designer/) skill.
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "name": "ai_tech_org_plugin",
-  "version": "2.0.0",
-  "description": "ScaleSync AI-Native Organization v2.0 — end-to-end AI agency in one self-contained plugin. 239 skills + 118 agents across 10 categories. Idea intake → market-fit validation → spec → Docker-first build → k8s/Helm → security/QA → release → launch → marketing → business growth. AOP-governed (auto-fired via hooks), sub-agent driven, TDD-enforced.",
+  "version": "3.0.0",
+  "description": "ScaleSync AI-Native Organization v3.0 — 250 skills + 118 agents. V3 adds Impeccable design system (23 design commands + 7 domain references), 10 taste-skill frontend variants (minimalist, brutalist, high-end-visual, image-to-code, redesign, etc.), and merged Emil Kowalski design engineering into ui-ux-designer.",
   "author": {
     "name": "Anand Shrivastava",
     "url": "https://github.com/Anand195"
@@ -12,7 +12,9 @@
     "kubernetes", "helm", "market-research", "product-market-fit", "devops",
     "ci-cd", "github-pages", "release-management", "aop", "end-to-end",
     "agents", "language-experts", "infrastructure", "quality-assurance",
-    "developer-experience", "specialized-domains"
+    "developer-experience", "specialized-domains",
+    "ui-design", "ux-design", "design-system", "frontend", "taste-skill",
+    "impeccable", "emil-design-eng", "design-taste"
   ],
   "license": "MIT"
 }
