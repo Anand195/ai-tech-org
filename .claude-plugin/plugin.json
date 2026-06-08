@@ -1,0 +1,16 @@
+{
+  "name": "ai_tech_org_plugin",
+  "version": "2.0.0",
+  "description": "ScaleSync AI-Native Organization — end-to-end AI agency in one self-contained plugin. Idea intake → market-fit validation → spec → Docker-first build → k8s/Helm → security/QA → release → launch → marketing → business growth. AOP-governed (auto-fired via hooks), sub-agent driven, TDD-enforced. Slash-command entry points, skill routing map, live secrets binding, scheduled ops, and client portal. Every project Dockerized by default; phase-by-phase delivery with private git repo, issues, releases, and branded GitHub Pages walkthroughs.",
+  "author": {
+    "name": "Anand Shrivastava",
+    "url": "https://github.com/Anand195"
+  },
+  "homepage": "https://github.com/Anand195/ai-tech-org",
+  "keywords": [
+    "ai-agency", "scalesync", "orchestration", "sub-agent", "tdd", "docker-first",
+    "kubernetes", "helm", "market-research", "product-market-fit", "devops",
+    "ci-cd", "github-pages", "release-management", "aop", "end-to-end"
+  ],
+  "license": "MIT"
+}

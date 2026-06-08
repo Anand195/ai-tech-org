@@ -1,0 +1,43 @@
+{
+  "_comment": "Recommended permission allowlist for ScaleSync ai_tech_org_plugin. Merge into ~/.claude/settings.json (or project .claude/settings.json) to reduce permission prompts for the routine, read-only and standard agency operations. Review before adding write/deploy entries.",
+  "permissions": {
+    "allow": [
+      "Bash(gh issue:*)",
+      "Bash(gh pr:*)",
+      "Bash(gh release:*)",
+      "Bash(gh repo view:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)",
+      "Bash(git branch:*)",
+      "Bash(git checkout:*)",
+      "Bash(docker compose config:*)",
+      "Bash(docker compose ps:*)",
+      "Bash(docker compose logs:*)",
+      "Bash(docker build:*)",
+      "Bash(docker images:*)",
+      "Bash(trivy image:*)",
+      "Bash(helm lint:*)",
+      "Bash(helm template:*)",
+      "Bash(kubectl get:*)",
+      "Bash(kubectl describe:*)",
+      "WebSearch",
+      "WebFetch"
+    ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(gh repo create:*)",
+      "Bash(docker push:*)",
+      "Bash(kubectl apply:*)",
+      "Bash(kubectl delete:*)",
+      "Bash(helm install:*)",
+      "Bash(helm upgrade:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /:*)",
+      "Bash(kubectl delete namespace:*)"
+    ]
+  }
+}

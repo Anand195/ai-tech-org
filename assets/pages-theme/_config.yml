@@ -1,0 +1,12 @@
+# ScaleSync GitHub Pages theme config — copy into each project's docs/_config.yml
+title: "ScaleSync · Project Walkthrough"
+description: "Phase-by-phase build record — what we built, why, and what's next."
+theme: jekyll-theme-minimal
+# ScaleSync brand
+logo: /assets/scalesync-logo.png
+show_downloads: false
+google_analytics:
+# Brand colors are applied via assets/css/style.scss override (see pages-theme/style.scss)
+markdown: kramdown
+plugins:
+  - jekyll-remote-theme

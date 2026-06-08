@@ -1,0 +1,23 @@
+---
+---
+@import "{{ site.theme }}";
+
+/* ScaleSync brand override — copy into docs/assets/css/style.scss */
+:root {
+  --sy-orange: #F37021;
+  --sy-green:  #1D8A17;
+  --sy-navy:   #1B2A38;
+  --sy-bg:     #F8FAFC;
+}
+
+body { background: var(--sy-bg); color: var(--sy-navy); }
+.page-header,
+header { background: linear-gradient(135deg, var(--sy-navy), #0f1c27) !important; color: #fff; }
+h1, h2, h3 { color: var(--sy-navy); }
+h1 { border-bottom: 3px solid var(--sy-orange); padding-bottom: .3em; }
+a { color: var(--sy-orange); }
+a:hover { color: var(--sy-green); }
+.btn, .badge { background: var(--sy-orange); color: #fff; border: none; }
+blockquote { border-left: 4px solid var(--sy-green); color: #4A5568; }
+code, pre { background: #eef2f6; }
+table th { background: var(--sy-navy); color: #fff; }
