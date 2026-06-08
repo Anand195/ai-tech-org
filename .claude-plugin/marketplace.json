@@ -6,14 +6,14 @@
     "url": "https://github.com/Anand195"
   },
   "metadata": {
-    "description": "ScaleSync AI-Native Organization — complete AI agency in one Claude Code plugin. Idea → market-fit → build → launch → growth.",
+    "description": "ScaleSync AI-Native Organization v2.0 — 239 skills + 118 agents. Complete AI agency in one Claude Code plugin.",
     "version": "2.0.0"
   },
   "plugins": [
     {
       "name": "ai_tech_org_plugin",
       "source": "./",
-      "description": "End-to-end AI agency in one self-contained plugin: idea → market-fit → Docker-first build → k8s/Helm → security/QA → release → launch → marketing → growth. AOP-governed, sub-agent driven, TDD-enforced. 239 skills, 6 commands, AOP hooks.",
+      "description": "End-to-end AI agency in one plugin: idea → market-fit → Docker build → k8s/Helm → QA → release → launch → growth. 239 skills + 118 agents, 6 commands, AOP hooks. V2 adds Language Experts, Core Dev, Infrastructure, QA, Data & AI, DevEx, Specialized Domains, Business & Product, Orchestration, Research agents.",
       "version": "2.0.0",
       "author": {
         "name": "Anand Shrivastava",
@@ -28,8 +28,9 @@
         "kubernetes",
         "tdd",
         "devops",
-        "full-stack",
-        "agency"
+        "agents",
+        "language-experts",
+        "full-stack"
       ]
     }
   ]

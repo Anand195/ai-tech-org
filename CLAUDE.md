@@ -8,6 +8,12 @@ A **single self-contained plugin** that is a complete AI agency: idea → market
 - **`hooks/`** — `aop-gate.sh` auto-fires AOP on SessionStart + UserPromptSubmit (enforcement, not advisory)
 - **`ROUTING.md`** — resolves the 239-skill overlaps (which skill when; one owner per deliverable)
 - **`config/permissions.json`** — recommended allowlist to cut permission prompts
+
+## V2.1 Agents Expansion
+- **`agents/`** — 118 specialized agents across 10 categories: Language Experts (25), Core Development (12), Infrastructure (9), Quality Assurance (6), Data & AI (12), Developer Experience (15), Specialized Domains (15), Business & Product (6), Orchestration (8), Research & Analysis (10)
+- Each agent is a dedicated `.md` file with frontmatter (name, description, tools, model) + deep expertise instructions
+- All 118 agents sourced from [awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) — zero duplication with existing 239 skills
+- Agents directory auto-discovered by Claude Code — invoke by agent name in any prompt
 - **`config/schedule-routines.md`** — recurring ops (cost/deps/threat/portfolio) via `/schedule`
 - **3 new skills** — `client-portal-generator`, `scheduled-ops`, `secrets-binding`
 - **`assets/pages-theme/`** — branded GitHub Pages theme (ScaleSync colors)
