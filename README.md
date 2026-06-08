@@ -354,7 +354,7 @@ V3 adds a complete UI/UX design system with 11 new skills:
 
 | Skill | Source | Purpose |
 |-------|--------|---------|
-| [impeccable](skills/impeccable/) | pbakaus/impeccable | 23 design commands + 7 domain references (typography, color, motion, spatial, interaction, responsive, UX writing) + anti-pattern detection |
+| [impeccable](skills/impeccable/) | pbakaus/impeccable | 23 design commands + 27 reference files (typography, color, motion, spatial, interaction, responsive, UX writing, craft, critique, audit, polish, etc.) + anti-pattern detection scripts |
 | [design-taste-frontend](skills/design-taste-frontend/) | Leonxlnx/taste-skill | Anti-slop frontend skill with 3 adjustable dials (variance, motion, density) |
 | [design-taste-frontend-v1](skills/design-taste-frontend-v1/) | Leonxlnx/taste-skill | Original v1 of taste-skill (preserved for compatibility) |
 | [gpt-taste](skills/gpt-taste/) | Leonxlnx/taste-skill | Stricter GPT/Codex variant with higher layout variance |
